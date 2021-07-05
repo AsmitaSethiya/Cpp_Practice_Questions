@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int num, temp, r, rev = 0;
+    int num, temp, r, sum = 0;
 
     cout<<"Enter a number: ";
     cin>>num;
@@ -13,11 +13,11 @@ int main()
     while(num != 0)
     {
         r = num % 10;
-        rev = rev * 10 + r;
+        sum += (r * r * r);
         num = num / 10;
     }
 
-    if(temp == rev)
+    if(sum == temp)
     {
         cout<<"Armstrong number.";
     }
